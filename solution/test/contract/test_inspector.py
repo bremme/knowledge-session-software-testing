@@ -12,6 +12,7 @@ def inspector():
 
 # Testing scope
 # the `is_weekend`` function will be part of the unit under test. Using a mock will only complicate the test
+# this test uses a functional approach
 
 # Mocks
 
