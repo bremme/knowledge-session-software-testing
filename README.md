@@ -9,7 +9,7 @@ The following topics will be explained/discussed using this example project:
 * fixtures and test setup
 * line coverage vs functional coverage
 * solitary vs sociable
-* stubs vs mocks
+* stubs vs mocks (test doubles)
 
 # Installation
 
@@ -49,3 +49,36 @@ This example project is build using a somewhat relevant theme for the energy sec
 * contract type B
     * always firm capacity is allowed
     * non-firm when total capacity is available
+
+# More on concepts
+
+**solitary test**
+
+* pro
+  * isolation
+  * fast
+  * easy to find issues
+* con
+  * can be more brittle (when depending too much on implementation)
+
+**sociable tests**
+
+* integration
+* usually fast
+* generally less dependent on the implementation / brittle
+* might be harder to debug
+
+> Take away, if the sociable / integration test has the same coverage using less loc compared to individual solitary test -> choose the sociable tests.
+
+**mocks**
+
+* use when order and arguments of calls are important
+
+**stubs**
+
+* simple controlled output
+
+# Further reading
+
+* https://martinfowler.com/bliki/UnitTest.html
+* https://martinfowler.com/bliki/TestDouble.html
