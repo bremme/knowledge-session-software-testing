@@ -1,3 +1,4 @@
+from typing import Optional
 from unittest.mock import MagicMock
 
 import pytest
@@ -7,9 +8,18 @@ from app.capacity.request import CapacityRequest, Customer
 from app.contract.contract import Contract, ContractType
 from app.contract.repository import ContractRepositoryInterface
 
+# Testing scope
+# Only capacitor allocator
+
+# Mocks
+# Use mock for the contract inspector
+
+# Stubs
+# Use stub for the contract repository
+
 
 class ContractRepositoryStub(ContractRepositoryInterface):
-    def get_contract(self, contract_id: int) -> Contract:
+    def get_contract(self, contract_id: int) -> Optional[Contract]:
         return {
             1: Contract(
                 contract_type=ContractType.TYPE_A,
@@ -90,6 +100,7 @@ class TestCapacityAllocator:
             "mon": False,
             "tue": False,
         }, "No power should be allocated"
+
         assert result_two == {
             "mon": False,
             "tue": False,
