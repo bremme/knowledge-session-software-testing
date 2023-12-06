@@ -5,6 +5,8 @@ Knowledge session demo about software testing.
 The following topics will be explained/discussed using this example project:
 
 * test arrangement
+  * package / folder structure
+  * naming
   * given, when, then / arrange, act, assert
 * fixtures and test setup
 * line coverage vs functional coverage
@@ -36,6 +38,8 @@ touch \
   test/contract/test_inspector.py \
   test/contract/test_repository.py \
 ```
+
+> Alternatively you can also just run `setup.sh`
 
 ## Run tests
 
