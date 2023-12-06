@@ -19,7 +19,7 @@ CONTRACTS = {
 
 class ContractRepositoryInterface(ABC):
     @abstractmethod
-    def get_contract(self, contract_id: int) -> Optional[Contract]:
+    def get_contract(self, contract_id: int) -> Optional[Contract]:  # pragma: no cover
         raise NotImplementedError
 
 
